@@ -5,10 +5,20 @@ import { useDictionary } from "@/i18n/DictionaryContext";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
+interface Place {
+  id: string;
+  title: string;
+  category: string;
+  rating: number;
+  image: string;
+  gallery: string[];
+  span: string;
+}
+
 export default function UnseenPlaces() {
   const { dict } = useDictionary();
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedPlace, setSelectedPlace] = useState<any>(null);
+  const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const places = [
@@ -288,7 +298,7 @@ export default function UnseenPlaces() {
                           {place.title}
                         </h3>
                         <p className="text-white/80 text-lg max-w-xl line-clamp-2 hidden md:block">
-                          {/* @ts-ignore */}
+                          {/* @ts-expect-error - Dictionary path is dynamic */}
                           {dict.pages.unseen.articles[place.id]?.content}
                         </p>
                       </div>
@@ -467,7 +477,7 @@ export default function UnseenPlaces() {
                 <div className="flex-1 overflow-y-auto pr-4 custom-scrollbar">
                   <div className="prose prose-slate dark:prose-invert max-w-none">
                     <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                      {/* @ts-ignore */}
+                      {/* @ts-expect-error - Dictionary path is dynamic */}
                       {dict.pages.unseen.articles[selectedPlace.id]?.content}
                     </p>
                     <div className="bg-primary/5 p-8 rounded-3xl mb-8 border border-primary/10">
@@ -475,7 +485,7 @@ export default function UnseenPlaces() {
                         <span className="text-2xl">💡</span> Useful Info
                       </h4>
                       <p className="text-muted-foreground leading-relaxed italic">
-                        {/* @ts-ignore */}
+                        {/* @ts-expect-error - Dictionary path is dynamic */}
                         {dict.pages.unseen.articles[selectedPlace.id]?.moreInfo}
                       </p>
                     </div>

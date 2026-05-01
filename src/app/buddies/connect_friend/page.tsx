@@ -19,10 +19,18 @@ export default function ConnectFriend() {
   const router = useRouter();
   const [connectedBuddies, setConnectedBuddies] = useState<Buddy[]>([]);
 
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
-    const stored = localStorage.getItem("connected_buddies");
-    if (stored) setConnectedBuddies(JSON.parse(stored));
+    const timer = setTimeout(() => {
+      setMounted(true);
+      const stored = localStorage.getItem("connected_buddies");
+      if (stored) setConnectedBuddies(JSON.parse(stored));
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
+
+  if (!mounted) return null;
 
   const handleRemove = (name: string) => {
     const updated = connectedBuddies.filter((b) => b.name !== name);

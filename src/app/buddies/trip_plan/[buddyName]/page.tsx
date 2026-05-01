@@ -192,10 +192,18 @@ export default function TripPlanPage() {
 
   const [isConnected, setIsConnected] = useState(false);
 
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
-    const stored: Buddy[] = JSON.parse(localStorage.getItem("connected_buddies") ?? "[]");
-    setIsConnected(stored.some((b) => b.name === buddyName));
+    const timer = setTimeout(() => {
+      setMounted(true);
+      const stored: Buddy[] = JSON.parse(localStorage.getItem("connected_buddies") ?? "[]");
+      setIsConnected(stored.some((b) => b.name === buddyName));
+    }, 0);
+    return () => clearTimeout(timer);
   }, [buddyName]);
+
+  if (!mounted) return null;
 
   const handleConnect = () => {
     const buddy = buddyDetails[buddyName];
@@ -215,7 +223,7 @@ export default function TripPlanPage() {
         {/* Header */}
         <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
           <div>
-            <p className="text-sm text-muted-foreground mb-1">{buddyName}'s Trip Plan</p>
+            <p className="text-sm text-muted-foreground mb-1">{buddyName}&apos;s Trip Plan</p>
             <h1 className="text-3xl md:text-4xl font-extrabold font-heading">{plan.destination}</h1>
           </div>
           <Button variant="outline" onClick={() => router.back()}>← Back</Button>

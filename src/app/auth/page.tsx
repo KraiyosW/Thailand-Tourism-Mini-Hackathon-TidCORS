@@ -45,7 +45,7 @@ export default function AuthPage() {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/60 via-primary/30 to-black/80" />
         </div>
         
-        <div className="relative z-10 p-16 flex flex-col justify-between h-full text-white">
+        <div className="relative z-10 p-16 pt-32 flex flex-col justify-between h-full text-white">
           <Link href="/" className="flex items-center gap-2 group animate-fade-in-up opacity-0">
             <div className="w-12 h-12 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500">
               <img src="/logo.png" alt="Logo" className="w-full h-full object-cover rounded-2xl" />
@@ -59,7 +59,7 @@ export default function AuthPage() {
               <span className="text-secondary drop-shadow-lg">Local Communities</span>
             </h1>
             <p className="text-xl text-white/80 max-w-lg leading-relaxed animate-fade-in-up opacity-0 delay-200">
-              Join our platform to discover Thailand's best-kept secrets, or share your local expertise with travelers from around the world.
+              Join our platform to discover Thailand&apos;s best-kept secrets, or share your local expertise with travelers from around the world.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function AuthPage() {
       </div>
 
       {/* Right Side: Auth Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-16 overflow-y-auto no-scrollbar">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 pt-32 md:p-16 md:pt-40 overflow-y-auto no-scrollbar">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center lg:text-left animate-fade-in-up opacity-0">
             <h2 className="text-4xl font-extrabold tracking-tight mb-2">

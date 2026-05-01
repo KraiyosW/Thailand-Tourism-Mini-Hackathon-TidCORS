@@ -4,26 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useDictionary } from "@/i18n/DictionaryContext";
 import { useState } from "react";
 
-const LOCATIONS = [
-  "Suvarnabhumi Airport (BKK)",
-  "Don Mueang Airport (DMK)",
-  "Sukhumvit 11, Bangkok",
-  "Grand Palace, Bangkok",
-  "Chatuchak Weekend Market",
-  "Khao San Road",
-  "Siam Paragon",
-  "Phuket Old Town",
-  "Patong Beach, Phuket",
-  "Chiang Mai Old City",
-  "Pattaya Walking Street"
-];
-
-const VEHICLES = [
-  { id: "car", value: "Car" },
-  { id: "motorcycle", value: "Motorcycle" },
-  { id: "tuktuk", value: "Tuk-Tuk" },
-  { id: "songthaew", value: "Songthaew (Red Truck)" }
-] as const;
 
 export default function TransportPage() {
   const { dict } = useDictionary();

@@ -55,28 +55,44 @@ const guideImages: Record<number, { avatar: string; gallery: string[] }> = {
 
 const RATINGS: Record<number, number> = { 1: 4.9, 2: 5.0, 3: 4.8, 4: 4.9, 5: 4.9 };
 
+interface Guide {
+  id: number;
+  name: string;
+  category: string;
+  specialty: string;
+  location: string;
+  bio: string;
+  price: number;
+  experience: number;
+  trips: string;
+  languages: string[];
+  expertise: string[];
+  avatar: string;
+  rating: number;
+}
+
 export default function GuidesPage() {
   const { dict } = useDictionary();
   const g = dict.pages.guides;
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedGuide, setSelectedGuide] = useState<any>(null);
+  const [selectedGuide, setSelectedGuide] = useState<Guide | null>(null);
   const [isChatting, setIsChatting] = useState(false);
   const [chatMsg, setChatMsg] = useState("");
   const [chatHistory, setChatHistory] = useState<{ role: "user" | "guide"; text: string }[]>([]);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   const guides = useMemo(
-    () => (g.list as any[]).map((item: any) => ({ ...item, ...guideImages[item.id], rating: RATINGS[item.id] ?? 4.8 })),
+    () => (g.list as Guide[]).map((item: Guide) => ({ ...item, ...guideImages[item.id], rating: RATINGS[item.id] ?? 4.8 })),
     [g.list],
   );
 
-  const filtered = guides.filter((gd: any) => {
+  const filtered = guides.filter((gd: Guide) => {
     const q = searchQuery.toLowerCase();
     return gd.name.toLowerCase().includes(q) || gd.specialty.toLowerCase().includes(q) || gd.location.toLowerCase().includes(q);
   });
 
-  const openGuide = (gd: any) => { setSelectedGuide(gd); setIsChatting(false); setChatHistory([]); };
+  const openGuide = (gd: Guide) => { setSelectedGuide(gd); setIsChatting(false); setChatHistory([]); };
   const closeAll = () => { setSelectedGuide(null); setIsChatting(false); setChatHistory([]); };
 
   const startChat = () => {
@@ -182,7 +198,7 @@ export default function GuidesPage() {
           {/* Bio */}
           <div>
             <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-3">{g.aboutMe}</h3>
-            <p className="text-lg italic text-neutral-600 leading-relaxed">"{selectedGuide.bio}"</p>
+            <p className="text-lg italic text-neutral-600 leading-relaxed">&quot;{selectedGuide.bio}&quot;</p>
           </div>
 
           {/* Languages & Expertise */}
@@ -240,7 +256,7 @@ export default function GuidesPage() {
 
         {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((gd: any) => (
+          {filtered.map((gd: Guide) => (
             <div key={gd.id} onClick={() => openGuide(gd)} className="group glass rounded-2xl overflow-hidden border border-border hover:border-primary/40 transition-all duration-300 hover:shadow-xl cursor-pointer">
               {/* Image */}
               <div className="h-56 w-full overflow-hidden relative">
@@ -263,7 +279,7 @@ export default function GuidesPage() {
                     <p className="text-[9px] text-muted-foreground uppercase font-bold">{g.perDay}</p>
                   </div>
                 </div>
-                <p className="text-muted-foreground text-sm line-clamp-2 mb-4 italic">"{gd.bio}"</p>
+                <p className="text-muted-foreground text-sm line-clamp-2 mb-4 italic">&quot;{gd.bio}&quot;</p>
                 <div className="flex justify-between items-center pt-3 border-t border-border">
                   <div className="flex items-center gap-1.5 text-[10px] font-bold text-muted-foreground uppercase"><UsersIcon /> {gd.trips} {g.trips}</div>
                   <div className="flex gap-1">{gd.languages.map((l: string) => <span key={l} className="text-[9px] font-bold px-1.5 py-0.5 bg-muted text-muted-foreground rounded border border-border uppercase">{l.substring(0, 2)}</span>)}</div>
