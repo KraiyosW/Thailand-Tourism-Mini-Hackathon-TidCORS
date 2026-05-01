@@ -62,11 +62,14 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-muted overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg shadow-primary/20 border border-border/50">
+          <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
             <img 
-              src="/logo.jpg" 
+              src="/logo.png" 
               alt="Thai Unseen Logo" 
-              className="w-full h-full object-cover"
+              className={cn(
+                "w-full h-full object-cover transition-all duration-300",
+                !isScrolled && "brightness-0 invert"
+              )}
             />
           </div>
           <span className="font-bold text-xl tracking-tight hidden sm:block">

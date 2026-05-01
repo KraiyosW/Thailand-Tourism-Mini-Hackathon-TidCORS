@@ -82,7 +82,7 @@ export const en = {
     },
     transport: {
       title: "Transparent Transport",
-      subtitle: "Book verified drivers with transparent, upfront pricing.",
+      subtitle: "Book verified drivers with transparent, upfront pricing and real-time safety tracking.",
       historyBtn: "My Bookings",
       fairPriceCheck: "Fair Price Check",
       vehicleType: "Vehicle Type",
@@ -107,11 +107,24 @@ export const en = {
         songthaew: "Songthaew (Red Truck)"
       },
       safetyGuard: "Safety Guard",
-      safetyGuardDesc: "We've got your back. Immediate assistance is available if you feel unsafe or are being taken advantage of.",
+      safetyGuardDesc: "Our real-time safety engine monitors your route and connects you directly to help if anything goes wrong.",
       touristPolice: "Tourist Police",
-      policeHotline: "Direct hotline 1155",
+      policeHotline: "Dial 1155 (24/7 Hotline)",
       sosEmergency: "SOS Emergency",
-      shareLocation: "Share live location"
+      shareLocation: "Share Live Location",
+      locations: {
+        bkk_airport: "Suvarnabhumi Airport (BKK)",
+        dmk_airport: "Don Mueang Airport (DMK)",
+        sukhumvit: "Sukhumvit 11, Bangkok",
+        palace: "Grand Palace, Bangkok",
+        chatuchak: "Chatuchak Weekend Market",
+        khaosan: "Khao San Road",
+        siam: "Siam Paragon",
+        phuket_old: "Phuket Old Town",
+        patong: "Patong Beach, Phuket",
+        chiangmai_old: "Chiang Mai Old City",
+        pattaya: "Pattaya Walking Street"
+      }
     },
     unseen: {
       title: "Unseen Destinations",

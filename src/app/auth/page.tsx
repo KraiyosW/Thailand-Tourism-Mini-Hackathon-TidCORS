@@ -47,8 +47,8 @@ export default function AuthPage() {
         
         <div className="relative z-10 p-16 flex flex-col justify-between h-full text-white">
           <Link href="/" className="flex items-center gap-2 group animate-fade-in-up opacity-0">
-            <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-all duration-500">
-              <img src="/logo.jpg" alt="Logo" className="w-full h-full object-cover rounded-2xl" />
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500">
+              <img src="/logo.png" alt="Logo" className="w-full h-full object-cover rounded-2xl" />
             </div>
             <span className="font-bold text-2xl tracking-tight">Thai Unseen</span>
           </Link>
