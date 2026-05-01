@@ -59,7 +59,26 @@ export const en = {
     guides: {
       title: "Verified Local Guides",
       subtitle: "Connect with locals who know the real Thailand.",
-      beGuideBtn: "Become a Guide"
+      beGuideBtn: "Become a Guide",
+      searchPlaceholder: "Search guides...",
+      verified: "Verified",
+      perDay: "per day",
+      bookBtn: "Book Experience",
+      messageBtn: "Message",
+      aboutMe: "About Me",
+      experience: "Experience",
+      trips: "trips",
+      backBtn: "Back",
+      closeBtn: "Close",
+      exitChat: "Exit Chat",
+      chatPlaceholder: "Type your message...",
+      list: [
+        { id: 1, name: "Na T.", category: "Food", specialty: "Street Food", location: "Bangkok", bio: "I'll take you to the restaurants my grandmother took me to. No mass tourism, just authentic Thai flavors.", price: 1500, experience: 5, trips: "320", languages: ["Thai", "English"], expertise: ["Street Food", "Night Markets"] },
+        { id: 2, name: "Arm P.", category: "Photography", specialty: "Photography", location: "Ayutthaya", bio: "A professional photographer who loves capturing the spiritual essence of ancient ruins and serene ceremonies.", price: 2200, experience: 8, trips: "215", languages: ["Thai", "English", "Japanese"], expertise: ["Temple Photography", "Golden Hour"] },
+        { id: 3, name: "Papang S.", category: "Nature", specialty: "Nature Trekking", location: "Khao Sok", bio: "Born in the jungle, raised by the forest. I know every trail, waterfall, and hidden cave in southern Thailand.", price: 1800, experience: 12, trips: "450", languages: ["Thai", "English"], expertise: ["Jungle Trekking", "Wildlife"] },
+        { id: 4, name: "Krit P.", category: "Culture", specialty: "Culture & History", location: "Chiang Mai", bio: "I immerse you in the authentic rhythms of northern Thai village life, from silk weaving to hill-tribe homestays.", price: 2000, experience: 6, trips: "180", languages: ["Thai", "English", "French"], expertise: ["Village Life", "Hill Tribes"] },
+        { id: 5, name: "Lek W.", category: "Adventure", specialty: "Adventure", location: "Krabi", bio: "Rock climbing, cave kayaking, island hopping — I live for adrenaline and I'll take you along for the ride.", price: 2500, experience: 10, trips: "380", languages: ["Thai", "English"], expertise: ["Rock Climbing", "Kayaking"] },
+      ],
     },
     transport: {
       title: "Transparent Transport",
