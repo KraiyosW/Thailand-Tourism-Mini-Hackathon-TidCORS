@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,13 @@ const DriverIcon = () => (
 export default function AuthPage() {
   const [mode, setMode] = useState<"login" | "register">("login");
   const [role, setRole] = useState<string>("tourist");
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate login/register
+    router.push("/");
+  };
 
   const roles = [
     { id: "tourist", label: "Tourist", icon: <TouristIcon />, desc: "Find hidden gems" },
@@ -111,7 +119,7 @@ export default function AuthPage() {
             </button>
           </div>
 
-          <div key={mode} className="space-y-6 animate-fade-in-up opacity-0 delay-200">
+          <form onSubmit={handleSubmit} key={mode} className="space-y-6 animate-fade-in-up opacity-0 delay-200">
             {mode === "register" && (
               <div className="space-y-4">
                 <Label className="text-base">I am a...</Label>
@@ -164,7 +172,7 @@ export default function AuthPage() {
               </div>
             </div>
 
-            <Button className="w-full h-14 rounded-2xl text-lg font-extrabold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300">
+            <Button type="submit" className="w-full h-14 rounded-2xl text-lg font-extrabold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300">
               {mode === "login" ? "Sign In" : "Get Started"}
             </Button>
 
@@ -187,7 +195,7 @@ export default function AuthPage() {
                 Apple
               </Button>
             </div>
-          </div>
+          </form>
 
           <p className="text-center text-sm text-muted-foreground animate-fade-in-up opacity-0 delay-300">
             By clicking continue, you agree to our{" "}
