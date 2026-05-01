@@ -8,7 +8,7 @@ export const en = {
     transport: "Transport",
   },
   hero: {
-    badge: "POWERED BY AI",
+    badge: "POWERED BY TidCORS Team",
     title1: "Uncover the",
     title2: "Hidden Thailand",
     subtitle: "Skip the tourist traps. Let our AI craft your perfect itinerary with verified locals and hidden gems.",
@@ -24,7 +24,7 @@ export const en = {
     exploreBtn: "Explore All Places",
     places: [
       { title: "Khao Sok National Park", location: "Surat Thani" },
-      { title: "Wat Chaloem Phra Kiat", location: "Lampang" },
+      { title: "Wat Phra That Hariphunchai", location: "Lampang" },
       { title: "Koh Kood", location: "Trat" }
     ]
   },
@@ -42,7 +42,7 @@ export const en = {
     transportBtn: "Book a Ride",
   },
   footer: {
-    copyright: "© 2026 Thai Unseen Agent. Developed for Super AI Hackathon."
+    copyright: "© 2026 Thai Unseen Agent By TidCORS Team. Developed for Super AI Hackathon."
   },
   pages: {
     aiRoute: {

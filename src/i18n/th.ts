@@ -26,7 +26,7 @@ export const th: Dictionary = {
     exploreBtn: "ดูสถานที่ทั้งหมด",
     places: [
       { title: "อุทยานแห่งชาติเขาสก", location: "สุราษฎร์ธานี" },
-      { title: "วัดเฉลิมพระเกียรติ", location: "ลำปาง" },
+      { title: "วัดพระธาตุหริภุญชัยวรมหาวิหาร", location: "ลำปาง" },
       { title: "เกาะกูด", location: "ตราด" }
     ]
   },
@@ -44,7 +44,7 @@ export const th: Dictionary = {
     transportBtn: "เรียกรถเลย",
   },
   footer: {
-    copyright: "© 2026 Thai Unseen Agent. พัฒนาสำหรับงาน Super AI Hackathon."
+    copyright: "© 2026 Thai Unseen Agent. โดย ทีม TidCORS. พัฒนาสำหรับงาน Super AI Hackathon."
   },
   pages: {
     aiRoute: {
