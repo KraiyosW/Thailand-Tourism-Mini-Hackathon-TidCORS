@@ -69,7 +69,69 @@ export const en = {
     unseen: {
       title: "Unseen Destinations",
       subtitle: "Discover hidden gems away from the tourist crowds.",
-      filterBtn: "Filters"
+      filterBtn: "Filters",
+      articles: {
+        khaoSok: {
+          content: "Cheow Lan Lake, located within the Khao Sok National Park, is a wonder of nature featuring stunning limestone mountains rising from the turquoise waters. It is perfect for those seeking tranquility, staying in floating rafts, and kayaking through the mist in the early morning. The park is home to diverse wildlife and the world's largest flower, the Rafflesia.",
+          moreInfo: "Best visited from December to April. Accessible via Surat Thani airport followed by a scenic drive and boat ride."
+        },
+        glowingTemple: {
+          content: "Wat Sirindhorn Wararam, also known as the Glowing Temple, features a magnificent fluorescent mural of the Tree of Life on its back wall. At dusk, the tree absorbs sunlight and begins to glow in the dark, creating a mystical atmosphere. It sits on a high hill overlooking the Mekong River and the border of Laos.",
+          moreInfo: "Visit during twilight (around 6:30 PM) to see the glowing effect at its best. Located in Ubon Ratchathani province."
+        },
+        kohLipe: {
+          content: "Often referred to as the 'Maldives of Thailand', Koh Lipe is famous for its crystal-clear waters and vibrant coral reefs. It is one of the few islands where you can easily snorkel directly from the beach. The island has three main beaches: Sunrise, Sunset, and Pattaya beach, each offering a unique vibe.",
+          moreInfo: "A car-free island in the Adang-Rawi Archipelago. Perfect for beach lovers and underwater explorers."
+        },
+        samPanBok: {
+          content: "Known as the Grand Canyon of Thailand, Sam Pan Bok is a massive rock reef under the Mekong River. During the dry season, the water recedes, revealing over 3,000 holes of various shapes and sizes carved by the river's current over centuries. One of the most famous holes is shaped like Mickey Mouse.",
+          moreInfo: "Best visited from November to May when the water levels are low. Located in Ubon Ratchathani."
+        },
+        banRakThai: {
+          content: "This peaceful village was founded by former Kuo Min Tang soldiers and is famous for its beautiful reservoir and tea plantations. The houses are built in traditional Yunnan Chinese style. Every morning, a thick mist covers the lake, creating a scene straight out of a traditional Chinese painting.",
+          moreInfo: "Located in Mae Hong Son near the Myanmar border. Famous for its high-quality Oolong tea and Yunnanese cuisine."
+        },
+        phanomRung: {
+          content: "Prasat Hin Phanom Rung is a stunning Khmer temple complex built on the rim of an extinct volcano. The sanctuary is built of pink sandstone and dedicated to the Hindu god Shiva. It is famous for the solar alignment where the sun shines through all 15 doorways four times a year.",
+          moreInfo: "An architectural masterpiece in Buriram province. The solar alignment events usually occur in March, April, September, and October."
+        },
+        surinIslands: {
+          content: "The Mu Ko Surin National Park is a paradise for divers and nature enthusiasts. It is home to the Moken people (Sea Gypsies) who have lived harmoniously with the sea for generations. The islands offer some of the best coral reef diving in the Andaman Sea.",
+          moreInfo: "Closed during the monsoon season (May-October). Accessible via boat from Khuraburi pier in Phang Nga."
+        },
+        kohKood: {
+          content: "Koh Kood is the fourth largest island in Thailand but remains one of the least developed. It is known for its untouched natural beauty, cascading waterfalls, and quiet beaches. It is the perfect destination for those who want to escape the crowd and enjoy a slow-paced island life.",
+          moreInfo: "Located in Trat province. Recommended for couples and travelers looking for total relaxation."
+        },
+        yaowarat: {
+          content: "Yaowarat, Bangkok's Chinatown, is one of the world's most vibrant street food destinations. As night falls, the neon-lit streets transform into a culinary paradise. From legendary oyster omelets and rolled rice noodles to traditional Chinese desserts, Yaowarat offers an explosion of flavors that have been perfected over generations.",
+          moreInfo: "The best time to visit is after 6:00 PM. Most stalls are closed on Mondays. Don't miss the toasted buns and the peppery rolled noodle soup!"
+        },
+        fishermanVillage: {
+          content: "Experience the ultimate sea-to-table dining at an authentic Fisherman Community. Away from the tourist spots, these coastal villages serve seafood caught just hours before. Taste the natural sweetness of blue swimmer crabs, giant prawns, and locally-sourced sea grapes, all prepared with traditional spicy dipping sauces.",
+          moreInfo: "Many of these communities are located in provinces like Phetchaburi (Bang Tabun) and Phang Nga. It's recommended to arrive early for the best selection of the daily catch."
+        },
+        thiLoSu: {
+          content: "Thi Lo Su is often hailed as the most beautiful waterfall in Thailand. Located deep within the Umphang Wildlife Sanctuary, this majestic multi-tiered waterfall is surrounded by lush tropical rainforest. The sheer scale and power of the water cascading over the limestone cliffs is a sight to behold.",
+          moreInfo: "Best visited between October and May. Requires a 4WD vehicle and a short hike to reach the falls. Located in Tak province."
+        },
+        watPhraKaew: {
+          content: "The Temple of the Emerald Buddha (Wat Phra Kaew) is the most sacred Buddhist temple in Thailand. Located within the Grand Palace complex, it houses the Emerald Buddha, a highly revered image carved from a single block of jade. The architecture features exquisite carvings, glittering mosaics, and golden stupas.",
+          moreInfo: "A strict dress code is enforced (no shorts or sleeveless shirts). Open daily from 8:30 AM to 3:30 PM."
+        },
+        ayutthaya: {
+          content: "The Ayutthaya Historical Park encompasses the ruins of the former capital of the Kingdom of Siam. Once one of the world's most cosmopolitan cities, the park features impressive prangs (reliquary towers) and massive monasteries. Highlights include Wat Chaiwatthanaram and the famous Buddha head in tree roots at Wat Mahathat.",
+          moreInfo: "Just a 1-hour drive from Bangkok. Renting a bicycle is the best way to explore the vast park ruins."
+        },
+        sukhothai: {
+          content: "Sukhothai, meaning 'Dawn of Happiness', was the first capital of Siam. The historical park is a UNESCO World Heritage site featuring elegant Buddha statues and classic lotus-bud stupas. It is considered the golden age of Thai art and architecture.",
+          moreInfo: "Located in Northern Thailand. The central zone is beautifully illuminated at night during special festivals."
+        },
+        riversidePrawns: {
+          content: "Dining by the Chao Phraya River in Ayutthaya is a legendary experience, famous for the giant river prawns. These prawns are charcoal-grilled until the meat is succulent and the head fat is creamy and golden. Served with spicy lime dipping sauce and steaming jasmine rice, it's a must-try culinary delight.",
+          moreInfo: "Ayutthaya has many riverside restaurants near the historical park. Weekends can be very busy, so booking is recommended."
+        }
+      }
     }
   }
 };
