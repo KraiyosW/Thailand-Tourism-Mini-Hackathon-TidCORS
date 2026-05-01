@@ -109,10 +109,12 @@ export function Navbar() {
           </Button>
           
           <div className="hidden sm:block">
-            <Button className="rounded-full shadow-lg">
-              <User className="w-4 h-4 mr-2" />
-              Sign In
-            </Button>
+            <Link href="/auth">
+              <Button className="rounded-full shadow-lg">
+                <User className="w-4 h-4 mr-2" />
+                Sign In
+              </Button>
+            </Link>
           </div>
 
           <Button
