@@ -64,7 +64,35 @@ export const en = {
     transport: {
       title: "Transparent Transport",
       subtitle: "Book verified drivers with transparent, upfront pricing.",
-      historyBtn: "My Bookings"
+      historyBtn: "My Bookings",
+      fairPriceCheck: "Fair Price Check",
+      vehicleType: "Vehicle Type",
+      pickupLocation: "Pickup Location",
+      dropoffLocation: "Drop-off Location",
+      driverQuote: "Driver's Quote / Asked Price",
+      checkBtn: "Check Price & Safety",
+      analyzingBtn: "Analyzing Price Data...",
+      estimatedFairPrice: "Estimated Fair Price",
+      driverAskedFor: "Driver asked for:",
+      priceGood: "Good",
+      priceAvg: "Avg",
+      priceHigh: "High/Scam",
+      scamAlert: "Scam Alert (Real-time)",
+      scamTip: "Tip: Insist on the meter or use a verified ride-hailing app.",
+      vp3Badge: "Prevent Exploitation",
+      scamAlertMessage: "recent reports of {{vehicle}} drivers overcharging near this area. The fair price should be around ฿{{price}}.",
+      vehicles: {
+        car: "Car",
+        motorcycle: "Motorcycle",
+        tuktuk: "Tuk-Tuk",
+        songthaew: "Songthaew (Red Truck)"
+      },
+      safetyGuard: "Safety Guard",
+      safetyGuardDesc: "We've got your back. Immediate assistance is available if you feel unsafe or are being taken advantage of.",
+      touristPolice: "Tourist Police",
+      policeHotline: "Direct hotline 1155",
+      sosEmergency: "SOS Emergency",
+      shareLocation: "Share live location"
     },
     unseen: {
       title: "Unseen Destinations",
