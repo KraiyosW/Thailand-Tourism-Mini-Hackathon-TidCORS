@@ -196,148 +196,145 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="glass bg-black/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
-              <div className="w-16 h-16 rounded-2xl bg-primary/20 text-primary flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-inner">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
+            <a href="/guides" className="block group">
+              <div className="glass bg-black/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-primary/20 text-primary flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-inner">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">
+                  {dict.ecosystem.guidesTitle}
+                </h3>
+                <p className="text-white/80 leading-relaxed mb-6">
+                  {dict.ecosystem.guidesDesc}
+                </p>
+                <div className="text-sky-400 font-bold group-hover:underline inline-flex items-center group-hover:text-sky-300 drop-shadow-sm">
+                  {dict.ecosystem.guidesBtn}{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1 group-hover:translate-x-1 transition-transform"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">
-                {dict.ecosystem.guidesTitle}
-              </h3>
-              <p className="text-white/80 leading-relaxed mb-6">
-                {dict.ecosystem.guidesDesc}
-              </p>
-              <a
-                href="/guides"
-                className="text-sky-400 font-bold hover:underline inline-flex items-center hover:text-sky-300 drop-shadow-sm"
-              >
-                {dict.ecosystem.guidesBtn}{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="ml-1 group-hover:translate-x-1 transition-transform"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+            </a>
 
             {/* Feature 2 */}
-            <div className="glass bg-black/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group delay-100">
-              <div className="w-16 h-16 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-inner">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                </svg>
+            <a href="/buddies" className="block group delay-100">
+              <div className="glass bg-black/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-secondary group-hover:text-white transition-all duration-300 shadow-inner">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">
+                  {dict.ecosystem.buddyTitle}
+                </h3>
+                <p className="text-white/80 leading-relaxed mb-6">
+                  {dict.ecosystem.buddyDesc}
+                </p>
+                <div className="text-amber-400 font-bold group-hover:underline inline-flex items-center group-hover:text-amber-300 drop-shadow-sm">
+                  {dict.ecosystem.buddyBtn}{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1 group-hover:translate-x-1 transition-transform"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">
-                {dict.ecosystem.buddyTitle}
-              </h3>
-              <p className="text-white/80 leading-relaxed mb-6">
-                {dict.ecosystem.buddyDesc}
-              </p>
-              <a
-                href="/buddies"
-                className="text-amber-400 font-bold hover:underline inline-flex items-center hover:text-amber-300 drop-shadow-sm"
-              >
-                {dict.ecosystem.buddyBtn}{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="ml-1 group-hover:translate-x-1 transition-transform"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+            </a>
 
             {/* Feature 3 */}
-            <div className="glass bg-black/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group delay-200">
-              <div className="w-16 h-16 rounded-2xl bg-accent/20 text-accent flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-inner">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
-                  <circle cx="7" cy="17" r="2" />
-                  <path d="M9 17h6" />
-                  <circle cx="17" cy="17" r="2" />
-                </svg>
+            <a href="/transport" className="block group delay-200">
+              <div className="glass bg-black/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
+                <div className="w-16 h-16 rounded-2xl bg-accent/20 text-accent flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-inner">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                    <circle cx="7" cy="17" r="2" />
+                    <path d="M9 17h6" />
+                    <circle cx="17" cy="17" r="2" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">
+                  {dict.ecosystem.transportTitle}
+                </h3>
+                <p className="text-white/80 leading-relaxed mb-6">
+                  {dict.ecosystem.transportDesc}
+                </p>
+                <div className="text-emerald-400 font-bold group-hover:underline inline-flex items-center group-hover:text-emerald-300 drop-shadow-sm">
+                  {dict.ecosystem.transportBtn}{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="ml-1 group-hover:translate-x-1 transition-transform"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4">
-                {dict.ecosystem.transportTitle}
-              </h3>
-              <p className="text-white/80 leading-relaxed mb-6">
-                {dict.ecosystem.transportDesc}
-              </p>
-              <a
-                href="/transport"
-                className="text-emerald-400 font-bold hover:underline inline-flex items-center hover:text-emerald-300 drop-shadow-sm"
-              >
-                {dict.ecosystem.transportBtn}{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="ml-1 group-hover:translate-x-1 transition-transform"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+            </a>
           </div>
         </div>
       </section>
