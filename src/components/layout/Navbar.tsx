@@ -62,8 +62,12 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-primary-foreground group-hover:scale-105 transition-transform shadow-lg shadow-primary/30">
-            <Compass className="w-6 h-6" />
+          <div className="w-10 h-10 rounded-xl bg-muted overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform shadow-lg shadow-primary/20 border border-border/50">
+            <img 
+              src="/logo.jpg" 
+              alt="Thai Unseen Logo" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className="font-bold text-xl tracking-tight hidden sm:block">
             Thai<span className="text-primary">Unseen</span>
