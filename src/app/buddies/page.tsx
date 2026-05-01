@@ -75,7 +75,7 @@ export default function TravelBuddies() {
                 </span>
               )}
             </Button>
-            <Button variant="outline">{dict.pages.buddies.profileBtn}</Button>
+            <Button variant="outline" onClick={() => router.push("/profile")}>{dict.pages.buddies.profileBtn}</Button>
           </div>
         </div>
 
@@ -139,7 +139,7 @@ export default function TravelBuddies() {
                 <p className="text-muted-foreground text-center py-12">No buddies match your filters.</p>
               )}
               {filteredBuddies.map((buddy, i) => (
-                <div key={i} className="glass p-4 rounded-2xl border border-border flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:shadow-md transition-shadow">
+                <div key={i} onClick={() => router.push(`/buddies/profile/${encodeURIComponent(buddy.name)}`)} className="glass p-4 rounded-2xl border border-border flex flex-col sm:flex-row gap-6 items-center sm:items-start group hover:shadow-md transition-shadow cursor-pointer">
                   <div className="w-32 h-32 rounded-full overflow-hidden shrink-0 border-4 border-background shadow-inner">
                     <img src={buddy.image} alt={buddy.name} className="w-full h-full object-cover" />
                   </div>
@@ -156,7 +156,7 @@ export default function TravelBuddies() {
                         <span key={interest} className="text-xs px-2 py-1 bg-background border border-border rounded-md text-foreground">{interest}</span>
                       ))}
                     </div>
-                    <div className="flex gap-2 justify-center sm:justify-start">
+                    <div className="flex gap-2 justify-center sm:justify-start" onClick={(e) => e.stopPropagation()}>
                       <Button
                         variant={connectedNames.includes(buddy.name) ? "outline" : "default"}
                         onClick={() => handleConnect(buddy)}
