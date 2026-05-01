@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-heading: "Noto Sans Thai", Arial, Helvetica, sans-serif;
   
   --primary: #0284c7; /* Thai ocean blue */
   --primary-foreground: #ffffff;
