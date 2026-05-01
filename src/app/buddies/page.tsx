@@ -32,9 +32,15 @@ export default function TravelBuddies() {
   const router = useRouter();
   const [connectedNames, setConnectedNames] = useState<string[]>([]);
 
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
-    const stored: { name: string }[] = JSON.parse(localStorage.getItem("connected_buddies") ?? "[]");
-    setConnectedNames(stored.map((b) => b.name));
+    const timer = setTimeout(() => {
+      setMounted(true);
+      const stored: { name: string }[] = JSON.parse(localStorage.getItem("connected_buddies") ?? "[]");
+      setConnectedNames(stored.map((b) => b.name));
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleConnect = (buddy: typeof buddies[0]) => {
@@ -50,6 +56,8 @@ export default function TravelBuddies() {
   const [nationality, setNationality] = useState("Any");
   const [costOnly, setCostOnly] = useState(false);
   const [appliedFilters, setAppliedFilters] = useState({ nationality: "Any", costOnly: false });
+
+  if (!mounted) return null;
 
   const filteredBuddies = buddies.filter((b) => {
     if (appliedFilters.nationality === "English Speakers" && b.language !== "English") return false;
