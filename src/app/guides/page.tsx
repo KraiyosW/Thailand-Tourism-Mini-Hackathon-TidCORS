@@ -69,6 +69,7 @@ interface Guide {
   expertise: string[];
   avatar: string;
   rating: number;
+  gallery: string[];
 }
 
 export default function GuidesPage() {
@@ -96,6 +97,7 @@ export default function GuidesPage() {
   const closeAll = () => { setSelectedGuide(null); setIsChatting(false); setChatHistory([]); };
 
   const startChat = () => {
+    if (!selectedGuide) return;
     setIsChatting(true);
     if (chatHistory.length === 0) setChatHistory([{ role: "guide", text: `Sawadee ka! I'm ${selectedGuide.name}. How can I help you plan your trip?` }]);
   };
@@ -105,7 +107,7 @@ export default function GuidesPage() {
     if (!chatMsg.trim()) return;
     setChatHistory((h) => [...h, { role: "user", text: chatMsg }]);
     setChatMsg("");
-    setTimeout(() => setChatHistory((h) => [...h, { role: "guide", text: `Sounds great! I'm available for ${selectedGuide.category} tours. Want to see my itinerary?` }]), 1000);
+    setTimeout(() => setChatHistory((h) => [...h, { role: "guide", text: `Sounds great! I'm available for ${selectedGuide?.category || "tour"} tours. Want to see my itinerary?` }]), 1000);
   };
 
   useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: "smooth" }); }, [chatHistory]);
@@ -217,7 +219,7 @@ export default function GuidesPage() {
           <div>
             <h3 className="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-3">Gallery</h3>
             <div className="grid grid-cols-2 gap-3">
-              {selectedGuide.gallery.map((img: string, i: number) => (
+              {selectedGuide?.gallery.map((img: string, i: number) => (
                 <div key={i} className="aspect-video rounded-xl overflow-hidden shadow-sm border border-neutral-100">
                   <img src={img} alt="" className="w-full h-full object-cover" />
                 </div>
